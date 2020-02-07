@@ -30,6 +30,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Attedance Tracking App'),
+      ),
       body: Center(
         child: Container(
           color: Colors.white,
