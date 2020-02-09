@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Screens/LoginPage.dart';
+import 'package:ata/Screens/HomePage.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -20,7 +21,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Login Screen'),
+      //home: LoginPage(title: 'Login Screen'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(title: 'Login Screen'),
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }

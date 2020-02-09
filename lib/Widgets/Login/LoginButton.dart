@@ -1,4 +1,3 @@
-import 'package:ata/Screens/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:ata/Widgets/ATA.dart';
 
@@ -15,10 +14,8 @@ class LoginButton extends StatelessWidget {
         minWidth: MediaQuery.of(context).size.width,
         padding: ATA.CONTENT_PADDING,
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => HomePage()),
-          );
+          //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+          Navigator.pushNamed(context, '/home');
         },
         child: Text(label,
             textAlign: TextAlign.center,
