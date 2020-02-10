@@ -15,7 +15,7 @@ class LoginButton extends StatelessWidget {
         padding: ATA.CONTENT_PADDING,
         onPressed: () {
           //Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
-          Navigator.pushNamed(context, '/home');
+          Navigator.pushReplacementNamed(context, '/home');
         },
         child: Text(label,
             textAlign: TextAlign.center,
