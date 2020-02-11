@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  static const String routeName = "/home";
   HomePage({Key key}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
             title: Text('CheckIn/CheckOut'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.pool),
+            icon: Icon(Icons.label_outline),
             title: Text('Point'),
           ),
           BottomNavigationBarItem(

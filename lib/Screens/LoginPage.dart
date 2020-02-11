@@ -4,6 +4,7 @@ import 'package:ata/Widgets/Login/PasswordField.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
+  static const String routeName = '/login';
   LoginPage({Key key, this.title}) : super(key: key);
   final String title;
   @override
