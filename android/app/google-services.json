@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "200787333464",
+    "firebase_url": "https://ata-flutter.firebaseio.com",
+    "project_id": "ata-flutter",
+    "storage_bucket": "ata-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200787333464:android:6624436dbed8f8bcbc152d",
+        "android_client_info": {
+          "package_name": "com.elitetech.ata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200787333464-1q81qkgg6odk84a58rpts1o15vrhgo9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP-e1B-iwRYn82wlooyOrXa20pXh8j-nY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200787333464-1q81qkgg6odk84a58rpts1o15vrhgo9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
