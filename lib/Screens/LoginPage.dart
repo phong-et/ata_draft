@@ -1,7 +1,9 @@
+import 'package:ata/Models/UserModel.dart';
 import 'package:ata/Widgets/Login/EmailField.dart';
 import 'package:ata/Widgets/Login/LoginButton.dart';
 import 'package:ata/Widgets/Login/PasswordField.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {
   static const String routeName = '/login';
@@ -9,6 +11,7 @@ class LoginPage extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
+    final userModel = Provider.of<UserModel>(context);
     return Scaffold(
       appBar: AppBar(
         title: Text('Attedance Tracking App'),
@@ -30,9 +33,9 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 45.0),
-                EmailField(),
+                EmailField(value:userModel.username),
                 SizedBox(height: 25.0),
-                PasswordField(),
+                PasswordField(value:userModel.password),
                 SizedBox(
                   height: 35.0,
                 ),
