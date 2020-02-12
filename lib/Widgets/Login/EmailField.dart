@@ -3,7 +3,8 @@ import 'package:ata/Widgets/ATA.dart';
 
 class EmailField extends StatelessWidget {
   final String label;
-  const EmailField({this.label = "Email"});
+  final String value;
+  const EmailField({this.label = "Email", this.value = ""});
   @override
   Widget build(BuildContext context) {
     return TextField(

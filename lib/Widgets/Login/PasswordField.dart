@@ -3,7 +3,8 @@ import 'package:ata/Widgets/ATA.dart';
 
 class PasswordField extends StatelessWidget {
   final String label;
-  const PasswordField({this.label = "Password"});
+  final String value;
+  const PasswordField({this.label = "Password",  this.value = ""});
   @override
   Widget build(BuildContext context) {
     return TextField(
