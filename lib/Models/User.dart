@@ -40,33 +40,40 @@ class UserModel with ChangeNotifier {
     try {
       _status = Status.Authenticating;
       // login firebase Auth REST API
-      // ...
       var body = {
         'key': FIREBASE_API_KEY,
-        'email': 'phillip7.et@gmail.com',
-        'password': '12345678',
+        'email': email,
+        'password': password,
       };
       var uri = Uri.parse(FIREBASE_SIGNIN_URL);
       uri = uri.replace(queryParameters: body);
       print('Logining...');
+      print(body);
       final response = await http.post(uri);
+
+      Map<String, dynamic> result = {"status":false, "msg":""};
       if (response.statusCode == 200) {
         // If server returns an OK response, parse the JSON
         print('Login successfully');
-        printJson(JSON.jsonDecode((response.body)));
+        result = JSON.jsonDecode(response.body);
+        printJson(result);
+        _status = Status.Authenticated;
+        notifyListeners();
+        return {"status": true, "msg": result["idToken"]};
       } else {
         // If that response was not OK, throw an error.
         print('Login Failed');
         printJson(response.statusCode);
         printJson(response.body);
+        _status = Status.Unauthenticated;
+        notifyListeners();
+        return {"status": false, "msg": result["errors"]["message"]};
       }
-      notifyListeners();
-      return true;
     } catch (e) {
       _status = Status.Unauthenticated;
       notifyListeners();
       print(e);
-      return false;
+      return {"status": false, "msg": e.msg};
     }
   }
 

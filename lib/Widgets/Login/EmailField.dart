@@ -1,4 +1,4 @@
-import 'package:ata/Models/UserModel.dart';
+import 'package:ata/Models/User.dart';
 import 'package:flutter/material.dart';
 import 'package:ata/Widgets/ATA.dart';
 import 'package:provider/provider.dart';

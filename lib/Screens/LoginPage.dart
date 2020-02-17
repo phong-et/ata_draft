@@ -1,4 +1,4 @@
-import 'package:ata/Models/UserModel.dart';
+import 'package:ata/Models/User.dart';
 import 'package:ata/Widgets/Login/EmailField.dart';
 import 'package:ata/Widgets/Login/LoginButton.dart';
 import 'package:ata/Widgets/Login/PasswordField.dart';

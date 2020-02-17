@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'Models/UserModel.dart';
+import 'Models/User.dart';
 import 'Screens/LoginPage.dart';
 import 'package:ata/Screens/HomePage.dart';
 
